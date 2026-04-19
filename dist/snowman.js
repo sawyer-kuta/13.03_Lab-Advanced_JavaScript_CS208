@@ -4,6 +4,7 @@ const flakeSize = 8;
 window.addEventListener("DOMContentLoaded", function() {
    let canvas = document.querySelector("canvas");
 
+   // Snowfall effect
    setInterval(function() {
       drawGround(canvas);
       drawSnowText(canvas);
@@ -46,6 +47,8 @@ function drawSnowText(canvas) {
 
 function drawSnowman(canvas) {
    let context = canvas.getContext("2d");
+
+   // Body
    context.fillStyle = "white";
 
    context.beginPath();
@@ -60,7 +63,9 @@ function drawSnowman(canvas) {
    context.arc(150, 60, 25, 0, Math.PI * 2);
    context.fill();
 
+   // Nose
    context.fillStyle = "orange"
+   
    context.beginPath();
    context.moveTo(150, 57);
    context.lineTo(170, 62);
